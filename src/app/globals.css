@@ -4,6 +4,13 @@
 
 
 body{
-    background-color: rgb(25, 25, 45);
+    background-color: #0C0C22;
     color: white;
+}
+
+.container{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }

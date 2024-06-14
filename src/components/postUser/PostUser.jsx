@@ -1,6 +1,21 @@
 import Image from "next/image"
 
-const PostUser = () => {
+const getUser = async (slug) => {
+    const res = await fetch(`https://jsonplaceholder.typicode.com/users/${slug}`);
+    if (!res.ok) {
+        throw new Error("Something went wrong")
+    }
+
+    return res.json();
+}
+
+const PostUser = async ({ userId }) => {
+
+    // console.log(userId)
+    const user = await getUser(userId)
+
+    // console.log(user)
+
     return (
         <div className="flex items-center gap-5">
             <Image
@@ -12,7 +27,7 @@ const PostUser = () => {
             />
             <div className="flex flex-col">
                 <span className="text-gray-500 font-bold">Author</span>
-                <span className="font-[500]">{"user.username"}</span>
+                <span className="font-[500]">{user.username}</span>
             </div>
         </div>
     )

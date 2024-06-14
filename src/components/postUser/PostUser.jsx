@@ -1,7 +1,7 @@
 import Image from "next/image"
 
 const getUser = async (slug) => {
-    const res = await fetch(`https://jsonplaceholder.typicode.com/users/${slug}`);
+    const res = await fetch(`https://jsonplaceholder.typicode.com/users/${slug}`, {cache: "no-store"});
     if (!res.ok) {
         throw new Error("Something went wrong")
     }
@@ -10,11 +10,8 @@ const getUser = async (slug) => {
 }
 
 const PostUser = async ({ userId }) => {
-
-    // console.log(userId)
+    
     const user = await getUser(userId)
-
-    // console.log(user)
 
     return (
         <div className="flex items-center gap-5">

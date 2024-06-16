@@ -12,11 +12,9 @@ const getData = async (slug) => {
 }
 
 const SingleBlog = async ({ params }) => {
-    // console.log(params)
     const { slug } = params
 
     const data = await getData(slug)
-    // console.log(data)
 
     return (
         <div className='px-[100px] flex gap-14'>

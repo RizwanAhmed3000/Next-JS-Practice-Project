@@ -8,6 +8,9 @@ const PostCard = ({ post }) => {
                 {/* {post.img && <div className="w-[90%] h-[400px] relative">
                     <Image src={post.img} alt="" fill className="object-cover" />
                 </div>} */}
+                {/* {post.img && <div className="w-[90%] h-[400px] relative">
+                    <Image src={post.img} alt="" fill className="object-cover" />
+                </div>} */}
                 <div className="w-[90%] h-[400px] relative">
                     <Image src="/post.jpg" alt="" fill className="object-cover" />
                 </div>

@@ -9,7 +9,7 @@ const getData = async () => {
 
     return res.json();
 }
-
+// no store method
 const BlogPage = async () => {
 
     const posts = await getData()
